@@ -1,0 +1,77 @@
+
+body {
+    background-color: black;
+    font-family: "Helvetica", "Arial", "sans-serif";
+    margin: 0;
+    /*margin:2em;*/
+}
+
+#mainBlock {
+    background-color: gray;
+    color: black;
+    width: 80vw;
+    /*height: 100vh;*/
+    transform: translate(10%, 0%);
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-bottom: 1em;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.inputSection {
+    padding: 0.01em 1em 1em 1em;
+    border-radius: 0.5em;
+    margin: 0.5em 0.5em 0.5em 0em;
+    background-color: silver;
+    width:25em;
+    /*display:inline-block;*/
+}
+
+.outputSection {
+    padding: 0.01em 1em 1em 1em;
+    border-radius: 0.5em;
+    margin: 0.5em 0.5em 0.5em 0em;
+    background-color: silver;
+    width:15em;
+    display: inline-block;
+}
+
+#submit {
+    background-color: silver;
+    border: 2px solid gray;
+    color: black;
+    border-radius: 10px;
+    width:8em;
+    transition: 0.25s;
+}
+
+#submit:hover {
+    border-color: white;
+    cursor: pointer;
+}
+
+#triHermes {
+    width:10em;
+    height:10em;
+    background-color: white;
+    border-radius: 0.5em;
+    display: inline-block;
+}
+
+/*
+.section:hover {
+    background-color: white;
+}
+
+input {
+    background: none;
+    color: white;
+    border: 2px solid blue;
+}
+
+select {
+    background: none;
+    color: white;
+    border: 2px solid blue;
+}*/

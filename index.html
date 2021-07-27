@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>All For One</title>
+    <link rel="stylesheet" href="afo.css">
+</head>
+
+<body>
+    <div id="mainBlock"><h1>NP Gain Calculator</h1>
+    <!--<form action="return calc()">-->
+        <div id="servant" class="inputSection">
+            <h3>Servant Info</h3>
+
+            <label for="selfClass">Class</label>
+            <select id="selfClass">
+                <option value="shielder">Shielder</option>
+                <option value="saber">Saber</option>
+                <option value="lancer" selected>Lancer</option>
+                <option value="archer">Archer</option>
+                <option value="caster">Caster</option>
+                <option value="rider">Rider</option>
+                <option value="assassin">Assassin</option>
+                <option value="berserker">Berserker</option>
+                <option value="ruler">Ruler</option>
+                <option value="avenger">Avenger</option>
+                <option value="moonCancer">Moon Cancer</option>
+                <option value="alterEgo">Alter Ego</option>
+                <option value="foreigner">Foreigner</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            <label for="atkStat">ATK Stat</label>
+            <input type="number" id="atkStat" step="any" value="9127"><br>            
+
+            <label for="npGenStat">NP Gen Stat</label>
+            <input type="number" id="npGenStat" step="any" value="1.08"><br>
+
+            <label for="baseStarRate">C. Star Drop Rate (%)</label>
+            <input type="number" id="baseStarRate" step="any" value="11.8"><br>
+
+            <label for="card">Card Type</label>
+            <select id="card">
+                <option value="buster">Buster</option>
+                <option value="quick" selected>Quick</option>
+                <option value="arts">Arts</option>
+                <option value="extra">Extra</option>
+            </select><br>
+
+            <label for="hitCount">Number of hits</label>
+            <input type="number" id="hitCount" value="12"><br>
+
+            <label for="selfAttrib">Attribute</label>
+            <select id="selfAttrib">
+                <option value="man">Man</option>
+                <option value="earth">Earth</option>
+                <option value="sky" selected>Sky/Heaven</option>
+            </select><br>
+
+            <label for="hp">HP (%)</label>
+            <input type="number" id="hp" value="100"><br>
+
+            <label for="np">NP?</label>
+            <input type="checkbox" id="np" value="np"><br>
+
+            <label for="npMult" class="onlynp">NP Multiplier (%)</label>
+            <input type="number" id="npMult" class="onlynp" value="600"><br>
+
+            <label for="superEffective" class="onlynp">Super Effective?</label>
+            <input type="checkbox" id="superEffective" class="onlynp"><br>
+
+            <label for="superEffectiveMod" class="onlynp">Super Effective Modifier</label>
+            <input type="number" id="superEffectiveMod" class="onlynp" value="1"><br>
+            
+            <label for="firstCard" class="notnp" >First card</label>
+            <select id="firstCard" class="notnp">
+                <option value="none">None</option>
+                <option value="buster">Buster</option>
+                <option value="quick">Quick</option>
+                <option value="arts">Arts</option>
+            </select><br>
+
+            <label for="busterChain" class="notnp">In Buster chain?</label>
+            <input type="checkbox" id="busterChain" class="notnp"><br>
+
+            <label for="crit" class="notnp">Critical Hit?</label>
+            <input type="checkbox" id="crit" class="notnp" value="crit"><br>
+            
+            <label for="cardPos" class="notnp">Card Position</label>
+            <select id="cardPos" class="notnp">
+                <option value="first">First</option>
+                <option value="second">Second</option>
+                <option value="third">Third</option>
+                <option value="extra">Extra</option>
+            </select>
+
+        </div>
+
+        <!--<div id="triHermes">
+            j
+        </div>-->
+
+        <div id="buffs" class="inputSection">
+            <h3>Buffs</h3>
+            <label for="cardBuff">Total Card Buffs (%)</label>
+            <input type="number" id="cardBuff" step="any" value="130"><br>
+            <label for="npGenBuff">Total NP Generation Buffs (%)</label>
+            <input type="number" id="npGenBuff" step="any" value="30"><br>
+            <label for="cStarBuff">Total C. Star Drop Rate Buffs (%)</label>
+            <input type="number" id="cStarBuff" step="any" value="0"><br>
+            <label for="atkBuff">ATK Buffs (%)</label>
+            <input type="number" id="atkBuff" value="0"><br>
+            <label for="powerBuff">Power Buffs (%)</label>
+            <input type="number" id="powerBuff" value="0"><br>
+            <label for="critDmgBuff">Critical Damage Buffs (%)</label>
+            <input type="number" id="critDmgBuff" value="0"><br>
+            <label for="npDmgBuff">NP Damage Buffs (%)</label>
+            <input type="number" id="npDmgBuff" value="0"><br>
+            <label for="dmgPlusBuff">Flat Damage Plus</label>
+            <input type="number" id="dmgPlusBuff" value="0"><br>
+        </div>
+
+        <div id="enemy" class="inputSection">
+            <h3>Enemy</h3>
+            <label for="enemyClass">Enemy Class</label>
+            <select id="enemyClass">
+                <option value="shielder">Shielder</option>
+                <option value="saber">Saber</option>
+                <option value="lancer">Lancer</option>
+                <option value="archer" selected>Archer</option>
+                <option value="caster">Caster</option>
+                <option value="rider">Rider</option>
+                <option value="assassin">Assassin</option>
+                <option value="berserker">Berserker</option>
+                <option value="ruler">Ruler</option>
+                <option value="avenger">Avenger</option>
+                <option value="moonCancer">Moon Cancer</option>
+                <option value="alterEgo">Alter Ego</option>
+                <option value="foreigner">Foreigner</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            <label for="enemyAttrib">Attribute</label>
+            <select id="enemyAttrib">
+                <option value="man">Man</option>
+                <option value="earth">Earth</option>
+                <option value="sky" selected>Sky/Heaven</option>
+            </select><br>
+
+            <label for="defBuff">Defense Buffs</label>
+            <input type="number" id="defBuff" value="0"><br>
+
+            <label for="dmgCutBuff">Flat Damage Cut</label>
+            <input type="number" id="dmgCutBuff" value="0"><br>
+
+            <label for="specialDef">Special Defense Buffs</label>
+            <input type="number" id="specialDef" value="0"><br>
+
+            <label for="overkillHits">Number of overkill hits</label>
+            <input type="number" id="overkillHits" value="0">
+        </div>
+ 
+        <input type="button" id="submit" value="Submit"><br><br>
+        <!--<input type="submit" id="submit" value="Submit"><br><br>-->
+        <div class="outputSection">
+            <h3>NP Gain</h3>
+            <p id="np_result">Result: </p>
+            <p id="np_min">No overkill: </p>
+            <p id="np_max">All overkill: </p>
+        </div>
+        <div class="outputSection">
+            <h3>C. Star Gain</h3>
+            <p id="stars_min">Min: </p>
+            <p id="stars_avg">Avg: </p>
+            <p id="stars_max">Max: </p>
+        </div>
+        <div class="outputSection">
+            <h3>Damage</h3>
+            <p id="dmg_min">Min: </p>
+            <p id="dmg_avg">Avg: </p>
+            <p id="dmg_max">Max: </p>
+        </div>
+    </div>
+    <!--</form>-->
+    <script src="afo.js" async></script>
+</body>
+
+
+
+</html>
